@@ -1,2 +1,2 @@
 # js4fun
-JS for practice and fun
+JS for fun
