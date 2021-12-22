@@ -20,7 +20,7 @@
         - The original/base object will likely be a CONST variable, and we change a copy of the CONST and assign to new variable(s) according to our required usage
 ## 2. First Class Functions
 
-1. Assigning functions to variables
+**1. Assigning functions to variables**
 ```javascript
 const square = function(x) {
 	return x * x
@@ -54,5 +54,55 @@ var line = console.log //note the lack of (). console.log witout () calls the co
 line("Hello world") // prints "Hello world"
 ```
 - Refer to `02_02\Begin\01_rename_wkg.js` and `02_02\Begin\01_debug_wkg.js`
+
+**2. Passing functions as arguments**
+
+- Anonymous function: a function without a name, that is usually used when function is assigned to variable. Usually used when the function is very specific to a certain instance
+
+```javascript
+// Original 'named' function code
+
+// initialise doIf function
+function doIf(condition, func) {
+  if(condition) {
+    func()
+  }
+}
+
+// arguments for doIf
+doIf(x === 1, sayXis1)
+doIf(x === "Bananas", sayXisBananas)
+doIf(x < 10 && x > 0, sayXisBetween0And10)
+
+// define/initialise following functions
+function sayXis1() { console.log("x is equal to 1") }
+function sayXisBananas() { console.log("x is equal to 'Bananas'") }
+function sayXisBetween0And10() { console.log("x is between 0 and 10") }
+```
+
+```javascript
+// 'Anonymised' function code
+
+// initialise doIf function
+function doIf(condition, func) {
+  if(condition) {
+    func()
+  }
+}
+
+// passing arguments for doIf, based on conditions
+    // note different anonymous functions are passed as
+        // second argument based on different conditions
+doIf(x === 1, function() {
+  console.log("x is equal to 1")
+})
+doIf(x === "Bananas", function() {
+  console.log("x is equal to 'Bananas'")
+})
+doIf(x < 10 && x > 0, function() {
+  console.log("x is between 0 and 10")
+})
+```
+- Refer to `\02_03\*.js`
 ### Reference
 *Learning Functional Programming with JavaScript* (ES5) by Shaun Wassell
