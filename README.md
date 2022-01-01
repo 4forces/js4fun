@@ -104,5 +104,80 @@ doIf(x < 10 && x > 0, function() {
 })
 ```
 - Refer to `\02_03\*.js`
+
+**3. Closure and returning functions**
+
+- E.g. of returning functions using multi brackets
+
+```javascript
+giveMeAFunction()() // prints "I'm a function."
+// the 2 brackets:
+// bracket 1 returns 'return function()'
+// bracket 2 returns 'console.log("I'm a function.")'
+
+function giveMeAFunction() {
+  return function() { // bracket 1 returns this line
+    console.log("I'm a function.") // bracket 2 returns this line
+  }
+}
+```
+
+- E.g of returning named functions. Note that the inner function name (in this case
+`printSomething()`) will not be retained upon return
+
+```javascript
+function giveMeAFunction () {
+  function printSomething() {
+    console.log("I'm a function")
+  }
+  return printSomething
+}
+
+const aFunction = giveMeAFunction()
+aFunction() //prints "I'm a function"
+```
+
+- Returning Multiple Functions (resembles Object Oriented style)
+
+  - twoFunctions.function1() //prints "I'm the first function
+  - twoFunctions.function2() //prints "I'm the second function"
+```javascript
+function return2Functions() {
+  return
+  function1: function() {
+    console.log("I'm the first function")
+  },
+  function2: function() {
+    console.log("I'm the second function")
+  }
+}
+
+var twoFunctions = return2Functions()
+
+twoFunctions.function1() //prints "I'm the first function"
+twoFunctions.function2() //prints "I'm the second function"
+
+```
+
+- Closures and Capturing
+
+'x' "captures" the value '5' from 'var x = 5'
+
+```javascript
+function someFunction() {
+  var x = 5
+  return function() {
+    console.log("x is " + x) // 'x' "captures" the value '5' from 'var x = 5' above
+  }
+}
+
+var printValueOfX = someFunction()
+printValueOfX() // prints "x is 5"
+```
+
+  - Refer to `\02_04\*.js`
+
+
+
 ### Reference
 *Learning Functional Programming with JavaScript* (ES5) by Shaun Wassell
