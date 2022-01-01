@@ -194,7 +194,7 @@ Refer to `\02_05\Begin\*.js`
 
 **1. Mappping**
 
-*Note:*  _.map() does not change the original array. The result has to be assigned to something.
+*Note:*  `_.map()` does not change the original array. The result has to be assigned to something.
 ```javascript
 const numbersSquared = _.map(numbers, func)
 ```
@@ -205,7 +205,11 @@ Refer to `\03_02\Begin\*.js`
 
 When we only want array elements that fit a specific criteria, for e.g. even numbers, or employees below a certain salary.
 
-A 'true' or 'false' value is returned after passing though 'filter'. The 'true' element is included in the new array. 'False' is left out.
+A `true` or `false` value is returned after passing though `filter`. The `true` element is included in the new array. `False` is left out.
+
+**3. Every/Some**
+
+Similar as `filter` for inputs, but output is just boolean T/F. `Some` returns `True` when at least 1 arr element returns `True`. `Every`
 
 ### Reference
 *Learning Functional Programming with JavaScript* (ES5) by Shaun Wassell
