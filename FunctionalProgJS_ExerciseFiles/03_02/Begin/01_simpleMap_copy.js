@@ -12,10 +12,10 @@ var numbersCubed = _.map(numbers, function(element) {
 console.log(numbersCubed)
 
 // ===== Original Code =====
-var numbers = [ 1, 2, 3, 4, 5 ]
-var numbersCubed = [ ]
+// var numbers = [ 1, 2, 3, 4, 5 ]
+// var numbersCubed = [ ]
 
-for(var i = 0; i < numbers.length; i++) {
-  var element = numbers[i]
-  numbersCubed.push(element * element * element)
-}
+// for(var i = 0; i < numbers.length; i++) {
+//   var element = numbers[i]
+//   numbersCubed.push(element * element * element)
+// }

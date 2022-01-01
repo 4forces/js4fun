@@ -194,7 +194,7 @@ Refer to `\02_05\Begin\*.js`
 
 **1. Mappping**
 
-*Note:*  _.map() does not change the original array. The result has to be assigned to something.
+*Note:*  _.map() does not changse the original array. The result has to be assigned to something.
 ```javascript
 const numbersSquared = _.map(numbers, func)
 ```
