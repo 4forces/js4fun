@@ -175,9 +175,20 @@ var printValueOfX = someFunction()
 printValueOfX() // prints "x is 5"
 ```
 
-  - Refer to `\02_04\*.js`
+Refer to `\02_04\Begin\*.js`
 
 
+- Higher-Order Functions
+
+A function that takes a function as an argument, returns a function, or both. In contrast to basic functions which just works with data, these functions work with other functions as well.
+
+Works with similar classes of functions with similar needs (conditions) and usages.
+
+One purpose is to delay the execution of the (inner) functions until all the conditions are ready.
+
+We can see how complex functions can be constructed from simpler functions, keeping code readable and flexible
+
+Refer to `\02_05\Begin\*.js`
 
 ### Reference
 *Learning Functional Programming with JavaScript* (ES5) by Shaun Wassell
