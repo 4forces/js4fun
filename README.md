@@ -211,13 +211,13 @@ Refer to `\03_03\Begin\*.js`
 
 **3. Every/Some**
 
-Similar as `filter` for inputs, but output is just boolean T/F. `Some` returns `True` when at least 1 arr element returns `True`. `Every`
+Similar as `filter` for inputs, but output is just boolean T/F. `Some` returns `True` when at least 1 arr element returns `True`. `Every` returns `True` when all elements return `True`.
 
 Refer to `\03_04\Begin\*.js`
 
 **3. Reducing**
 
-`Reduce` reduces the arr down to a single value based on conditions the user gives it in the function. For eg. array values may be passed through a 'sum' condition and return a single value.
+`Reduce` reduces the arr down to a single value based on conditions the user gives it in the function. For eg. array values may be passed through a 'sum' condition and return a single value (sum of all array values).
 
 ```javascript
 /* as opposed to the other functions above, the function
@@ -241,5 +241,15 @@ const sum = _.reduce(array, function(acc, element){
 ```
 
 Refer to `\03_05\Begin\*.js`
-### Reference
+
+**4. Combining functions**
+
+More can be achieved by combining functions together. Data is transformed via mulitiple functions (map, reduce, filter) to obtain desired results. The original data is not mutated. Transformed data is always assigned to a new variable.
+
+Refer to `\03_06\Begin\*.js`
+
+
+
+
+## Reference
 *Learning Functional Programming with JavaScript* (ES5) by Shaun Wassell
