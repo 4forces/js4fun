@@ -207,9 +207,39 @@ When we only want array elements that fit a specific criteria, for e.g. even num
 
 A `true` or `false` value is returned after passing though `filter`. The `true` element is included in the new array. `False` is left out.
 
+Refer to `\03_03\Begin\*.js`
+
 **3. Every/Some**
 
 Similar as `filter` for inputs, but output is just boolean T/F. `Some` returns `True` when at least 1 arr element returns `True`. `Every`
 
+Refer to `\03_04\Begin\*.js`
+
+**3. Reducing**
+
+`Reduce` reduces the arr down to a single value based on conditions the user gives it in the function. For eg. array values may be passed through a 'sum' condition and return a single value.
+
+```javascript
+/* as opposed to the other functions above, the function
+arg in 'reduce' generally takes in 2 args.
+A third element the starting value can also be passed in.
+'acc' = accumulated elements
+'element' = current element */
+
+// pseudo code
+_.reduce(array, function(acc,element) {
+  ...
+  return ...
+}, startingVal)
+
+// actual code
+const sum = _.reduce(array, function(acc, element){
+  {
+    return acc + element
+  }
+}, 0)
+```
+
+Refer to `\03_05\Begin\*.js`
 ### Reference
 *Learning Functional Programming with JavaScript* (ES5) by Shaun Wassell
