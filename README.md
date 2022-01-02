@@ -248,8 +248,36 @@ More can be achieved by combining functions together. Data is transformed via mu
 
 Refer to `\03_06\Begin\*.js`
 
+## 4. Callbacks
+
+**1. Intro**
+
+Asynchronous tasks are used so as to not hold up the application (which occurs in synchronous tasks). In 'Synchronous' tasks, the line before has to be executed before the next line (similar to procedural). This leads to long application hold ups occuring if one line of code is 'stuck'.
+
+In JS, async tasks are handled via 'callbacks'.
+
+A callback is a function which is passed as an argument to an asynchronous function.
+
+```javascript
+// e.g. of callback function in an async function
+// 'result' is usually the result of the async function (someAsyncTask in this case)
+  // that we pass to the callback function
+someAsyncTask( function(result) {
+  console.log("The result was: " + result)
+})
+
+console.log("I was called right away!")
 
 
+// e.g. of a function in synchronous(non-async) function
+var file = fs.readFileCync('someHugeFile.txt', 'utf8')
 
+console.log("That took a long time!")
+```
+
+
+**2. Simple Callbacks**
+
+Refer to `\04_02\Begin\*.js`
 ## Reference
 *Learning Functional Programming with JavaScript* (ES5) by Shaun Wassell
