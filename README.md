@@ -275,9 +275,23 @@ var file = fs.readFileCync('someHugeFile.txt', 'utf8')
 console.log("That took a long time!")
 ```
 
-
 **2. Simple Callbacks**
 
 Refer to `\04_02\Begin\*.js`
+
+**3. Callbacks with arguments**
+
+Usually in callbacks, the result of the asyc fxn is passed into the inner fxn as 2nd argument, and the error (err) is passed as the 1st argument.
+
+```javascript
+someAsyncFunction( function(err, result) {
+  ...
+})
+```
+To run lines after async function, it needs to be placed within the function argument of the async. Placing it outside may lead to errors as the next line still runs despite async function still incomplete.
+
+Refer to `\04_03\Begin\*.js`
+
+
 ## Reference
 *Learning Functional Programming with JavaScript* (ES5) by Shaun Wassell
