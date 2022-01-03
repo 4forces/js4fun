@@ -292,6 +292,46 @@ To run lines after async function, it needs to be placed within the function arg
 
 Refer to `\04_03\Begin\*.js`
 
+## Advanced Functional Concepts
+
+**1. Partial Application**
+
+Works by delaying the execution of the full function until all arguments are received.
+
+Note from typist: Looks like 'breaking down' the original function1, and creating a new function1.1 with the partial argument (of function1) incorporated into function1.1.
+This leaves the remaining arguments of function1 to be filled.
+
+```javascript
+// this is the main or 'full' function w 2 args 'x' and 'y'
+function add(x, y) {
+  return x + y
+}
+
+// this is the partially applied function, where partial arg (x and y) are resolved at a time
+function partiallyApply(func, x) {
+  return function(y) {
+    return func(x, y)
+  }
+}
+
+var add5 = partiallyApply(add, 5)
+add5(2) // gives '7'
+```
+
+Refer to `\05_02\Begin\*.js`
+
+**2. Recursion**
+
+- A recursive function is a function that calls itself somewhere within its code. Recursive function can sometimes be complicated to work through.
+
+```javascript
+function resursiveFunction() {
+  ...
+  recusiveFunction()
+  ...
+}
+```
+Refer to `\05_03\Begin\*.js`
 
 ## Reference
 *Learning Functional Programming with JavaScript* (ES5) by Shaun Wassell
